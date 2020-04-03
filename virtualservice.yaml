@@ -9,7 +9,10 @@ spec:
   gateways:
   - nginx/nginx
   http:
-  - route:
+  - match:
+    - uri:
+       exact: /
+    route:
     - destination:
         host: nginx
         port:
