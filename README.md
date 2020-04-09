@@ -6,10 +6,11 @@ kubectl create -n istio-system secret tls istio-ingressgateway-certs --key httpb
 kubectl apply -f namespaces.yaml
 kubectl apply -f .
 ``` 
-
 ```bash
-curl -k -v -HHost:httpbin.example.com --resolve httpbin.example.com:$SECURE_INGRESS_PORT:$INGRESS_HOST --cacert example.com.crt https://h
-ttpbin.example.com:$SECURE_INGRESS_PORT/status/418
+curl -k -v -HHost:httpbin.example.com --resolve httpbin.example.com:$SECURE_INGRESS_PORT:$INGRESS_HOST --cacert example.com.crt https://httpbin.example.com:$SECURE_INGRESS_PORT/status/418
+```
+OUTPUT
+```bash
 * Couldn't parse CURLOPT_RESOLVE entry 'httpbin.example.com::'!
 *   Trying 10.104.200.42...
 * TCP_NODELAY set
