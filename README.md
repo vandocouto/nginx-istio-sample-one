@@ -3,5 +3,6 @@ kubectl create -n istio-system secret tls istio-ingressgateway-certs --key httpb
 ```
 
 ```bash
+kubectl apply -f namespaces.yaml
 kubectl apply -f .
 ``` 
